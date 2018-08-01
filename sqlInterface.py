@@ -16,10 +16,10 @@ metadata = MetaData(bind=None)
 def create_table():
 	Employee = Table('Employee', metadata,
 				Column('ID', Integer, Sequence('user_id_seq'), primary_key=True),
-				Column('Name', String(50)),
+				Column('Name', String(100)),
 				Column('Age', Integer),
 				Column('Sal', Integer),
-				Column('Dept', String(50))
+				Column('Dept', String(100))
 					)
 
 	metadata.create_all(engine)
@@ -28,7 +28,7 @@ def create_table():
 
 
 @app.route("/", methods=['GET','POST','PUT'])
-def list_table_data():
+def listing_table_data():
 	Employee = Table('Employee', metadata, autoload = True, autoload_with = engine)
 	stmt = select([Employee])
 	result = conn.execute(stmt)
@@ -47,7 +47,7 @@ def list_table_data():
 			stmt = Employee.insert().\
 			    values(ID=ID,Name=Name,Age=Age,Sal=Sal,Dept=Dept)
 			conn.execute(stmt)
-			return '', status.HTTP_201_CREATED
+			return 'Successully added {} to the Database'.format(Name), status.HTTP_201_CREATED
 
 		else:
 			print(request.data)
