@@ -15,3 +15,6 @@ Delete data
 ------------------------
 A single table row can be chosen by providing the row ID in the URL as <URL>/<RowID>. The selected row is displayed along with the option to Delete the same.
 ![DEL](Screenshots/DeleteRequest.png)
+
+
+Dump: emp_tbl_dump.sql
