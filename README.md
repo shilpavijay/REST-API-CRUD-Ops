@@ -6,6 +6,7 @@ RESTful API build in Flask and MySQL that interacts with the Database to perform
 Display Table Data:
 --------------------
 The API contains a GET request which inturn triggers a SELECT statement which fetches data from the Database real-time and displays them.
+
 ![GET](Screenshots/GetRequest.png)
 
 Create and Update Data:
