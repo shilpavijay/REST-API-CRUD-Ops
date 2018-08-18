@@ -1,4 +1,6 @@
-#REST-API-CRUD-Ops
+REST-API-CRUD-Ops
+---------------------
+
 RESTful API build in Flask and MySQL that interacts with the Database to perform CRUD operations
 
 Display Table Data:
